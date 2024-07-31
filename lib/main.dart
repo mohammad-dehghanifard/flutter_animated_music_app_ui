@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: const [
-        Locale('fa'), // English
-      ],
+      supportedLocales: const [Locale('fa')],
       locale: const Locale("fa"),
       theme: ThemeData(
         fontFamily: 'shabnam',
