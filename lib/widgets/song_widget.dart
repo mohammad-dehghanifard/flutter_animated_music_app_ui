@@ -50,7 +50,7 @@ class SongWidget extends StatelessWidget {
         ),
       )
     ],
-  );
+      );
   }
 
   Widget _buildVerticalSongItem(double imageSize) {
