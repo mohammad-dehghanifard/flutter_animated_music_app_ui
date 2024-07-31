@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_music_app/models/song.dart';
+import 'package:flutter_animated_music_app/widgets/song_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    int count = 1;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -26,24 +29,9 @@ class HomePage extends StatelessWidget {
             // grid view
             Expanded(
                 child: GridView.count(
-              crossAxisCount: 2,
-              children: [
-                Container(
-                  width: 120,
-                  height: 120,
-                  color: Colors.orange,
-                ),
-                Container(
-                  width: 120,
-                  height: 120,
-                  color: Colors.orange,
-                ),
-                Container(
-                  width: 120,
-                  height: 120,
-                  color: Colors.orange,
-                ),
-              ],
+              childAspectRatio: 2.8,
+              crossAxisCount: count,
+              children: List.generate(songsList.length, (index) => SongWidget(song: songsList[index],count: count,))
             ))
           ],
         ),
